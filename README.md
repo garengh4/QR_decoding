@@ -1,11 +1,11 @@
 #QR_decoding
 The intent of this code is to stream live feed + capture and decode detected QR codes
 
-What you need:
---> Raspberry pi zero
---> MicroSD with Raspberry pi NOOBS (USE PROGRAM: SD card formatter)
---> camera, micro-usb with interfaces, etc.
---> HDMI, secondary monitor
+What you need: <br/>
+--> Raspberry pi zero <br/>
+--> MicroSD with Raspberry pi NOOBS (USE PROGRAM: SD card formatter) <br/>
+--> camera, micro-usb with interfaces, etc. <br/>
+--> HDMI, secondary monitor <br/>
 
 1) Connecting to the internet to download --> full tutorial here: https://www.circuitbasics.com/raspberry-pi-zero-ethernet-gadget/ <br/>
 (USE PROGRAM: PuTTY + WinSCP) <br/>
