@@ -2,54 +2,55 @@
 The intent of this code is to stream live feed + capture and decode detected QR codes
 
 What you need:
-- Raspberry pi zero
-- MicroSD with Raspberry pi NOOBS (USE PROGRAM: SD card formatter)
-- camera, micro-usb with interfaces, etc.
-- HDMI, secondary monitor
+--> Raspberry pi zero
+--> MicroSD with Raspberry pi NOOBS (USE PROGRAM: SD card formatter)
+--> camera, micro-usb with interfaces, etc.
+--> HDMI, secondary monitor
 
-1. Connecting to the internet to download --> full tutorial here: https://www.circuitbasics.com/raspberry-pi-zero-ethernet-gadget/
-   (USE PROGRAM: PuTTY + WinSCP)
-   /boot/config.txt --> dtoverlay=dwc2
-   /boot/cmdline.txt --> ... rootwait modules-load=dwc2,g_ether quiet ...
+1) Connecting to the internet to download --> full tutorial here: https://www.circuitbasics.com/raspberry-pi-zero-ethernet-gadget/ <br/>
+(USE PROGRAM: PuTTY + WinSCP) <br/>
+/boot/config.txt --> dtoverlay=dwc2 <br/>
+/boot/cmdline.txt --> ... rootwait modules-load=dwc2,g_ether quiet ... <br/>
     
-#Personal connection configuration 2020/08/08
-   Host Name: dobby.local
-   login as : pi
-   password : aeroclub
+#Personal connection configuration 2020/08/08 <br/>
+   Host Name: dobby.local <br/>
+   login as : pi <br/>
+   password : aeroclub <br/>
 
-2. Installing QR Decoding packages --> full tutorial here: https://github.com/rijinmk/code-qr-code-reader-rpi3
-   check internet connection --> ping 8.8.8.8 (Return to step 1 if fail)
-   sudo apt-get update
-   sudo apt-get upgrade
-   sudo apt-get install fswebcam
-   sudo apt-get install libzbar0 libzbar-dev
-   sudo pip install zbarlight
+2. Installing QR Decoding packages --> full tutorial here: https://github.com/rijinmk/code-qr-code-reader-rpi3 <br/>
+   check internet connection --> ping 8.8.8.8 (Return to step 1 if fail) <br/>
    
-3. Create/store/transfer files in appropriate directories
-   test93.py  --> /home/pi/
-   qr_codes   --> /home/pi/
-   qr_log.txt --> /home/pi/
+   sudo apt-get update <br/>
+   sudo apt-get upgrade <br/>
+   sudo apt-get install fswebcam <br/>
+   sudo apt-get install libzbar0 libzbar-dev <br/>
+   sudo pip install zbarlight <br/>
+   
+3. Create/store/transfer files in appropriate directories <br/>
+   test93.py  --> /home/pi/ <br/>
+   qr_codes   --> /home/pi/ <br/>
+   qr_log.txt --> /home/pi/ <br/>
 
-4. Write programs into autostart
+4. Write programs into autostart <br/>
 
-   /etc/xdg/lxsession/LXDE-pi/autostart
-   @lxpanel --profile LXDE-pi
-   @pcmanfm --desktop --profile LXDE-pi
-   @xscreensaver -no-splash 
+   /etc/xdg/lxsession/LXDE-pi/autostart <br/>
+   @lxpanel --profile LXDE-pi <br/>
+   @pcmanfm --desktop --profile LXDE-pi <br/>
+   @xscreensaver -no-splash <br/>
    point-rpi
 
-   @xset s off
-   @xset -dpms
-   @lxterminal -e python /home/pi/test93.py
+   @xset s off <br/>
+   @xset -dpms <br/>
+   @lxterminal -e python /home/pi/test93.py <br/>
    
-#POINTS OF NOTE: 
-- Python version 2 works better 
-- bashrc forces 2 instances of the program to run on startup, causing failure. Add this to last line:
+POINTS OF NOTE: <br/>
+--> Python version 2 works better <br/>
+--> bashrc forces 2 instances of the program to run on startup, causing failure. Add this to last line <br/>
 
-    /home/pi/.bashrc
-    alias python='/usr/bin/python2'
-    cd /home/pi/Desktop
-    python2 on_start_cmds.py
+   /home/pi/.bashrc <br/>
+   alias python='/usr/bin/python2' <br/>
+   cd /home/pi/Desktop <br/>
+   python2 on_start_cmds.py <br/>
 
 
 
