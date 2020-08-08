@@ -12,10 +12,10 @@ What you need: <br/>
 /boot/config.txt --> dtoverlay=dwc2 <br/>
 /boot/cmdline.txt --> ... rootwait modules-load=dwc2,g_ether quiet ... <br/>
     
-#Personal connection configuration 2020/08/08 <br/>
-   Host Name: dobby.local <br/>
-   login as : pi <br/>
-   password : aeroclub <br/>
+   #Personal connection configuration 2020/08/08 <br/>
+    Host Name: dobby.local <br/>
+    login as : pi <br/>
+    password : aeroclub <br/>
 
 2. Installing QR Decoding packages --> full tutorial here: https://github.com/rijinmk/code-qr-code-reader-rpi3 <br/>
    check internet connection --> ping 8.8.8.8 (Return to step 1 if fail) <br/>
