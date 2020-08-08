@@ -1,5 +1,5 @@
-# QR_decoding
-The intent of this code is to stream live feed + capture/decode detected QR codes. The follow
+#QR_decoding
+The intent of this code is to stream live feed + capture and decode detected QR codes
 
 What you need:
 - Raspberry pi zero
@@ -12,7 +12,7 @@ What you need:
    /boot/config.txt --> dtoverlay=dwc2
    /boot/cmdline.txt --> ... rootwait modules-load=dwc2,g_ether quiet ...
     
-# Personal connection configuration 2020/08/08
+#Personal connection configuration 2020/08/08
    Host Name: dobby.local
    login as : pi
    password : aeroclub
@@ -42,7 +42,7 @@ What you need:
    @xset -dpms
    @lxterminal -e python /home/pi/test93.py
    
-# POINTS OF NOTE: 
+#POINTS OF NOTE: 
 - Python version 2 works better 
 - bashrc forces 2 instances of the program to run on startup, causing failure. Add this to last line:
 
