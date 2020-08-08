@@ -7,7 +7,7 @@ What you need:
 - camera, micro-usb with interfaces, etc.
 - HDMI, secondary monitor
 
-1) Connecting to the internet to download --> full tutorial here: https://www.circuitbasics.com/raspberry-pi-zero-ethernet-gadget/
+1. Connecting to the internet to download --> full tutorial here: https://www.circuitbasics.com/raspberry-pi-zero-ethernet-gadget/
    (USE PROGRAM: PuTTY + WinSCP)
    /boot/config.txt --> dtoverlay=dwc2
    /boot/cmdline.txt --> ... rootwait modules-load=dwc2,g_ether quiet ...
@@ -17,7 +17,7 @@ What you need:
    login as : pi
    password : aeroclub
 
-2) Installing QR Decoding packages --> full tutorial here: https://github.com/rijinmk/code-qr-code-reader-rpi3
+2. Installing QR Decoding packages --> full tutorial here: https://github.com/rijinmk/code-qr-code-reader-rpi3
    check internet connection --> ping 8.8.8.8 (Return to step 1 if fail)
    sudo apt-get update
    sudo apt-get upgrade
@@ -25,12 +25,12 @@ What you need:
    sudo apt-get install libzbar0 libzbar-dev
    sudo pip install zbarlight
    
-3) Create/store/transfer files in appropriate directories
+3. Create/store/transfer files in appropriate directories
    test93.py  --> /home/pi/
    qr_codes   --> /home/pi/
    qr_log.txt --> /home/pi/
 
-4) Write programs into autostart
+4. Write programs into autostart
 
    /etc/xdg/lxsession/LXDE-pi/autostart
    @lxpanel --profile LXDE-pi
