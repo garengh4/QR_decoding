@@ -45,7 +45,7 @@ What you need: <br/>
    
 POINTS OF NOTE: <br/>
 --> Python version 2 works better <br/>
---> bashrc forces 2 instances of the program to run on startup, causing failure. Add this to last line <br/>
+--> bashrc forces 2 instances of the program to run on startup, causing failure. If you'd like to explore this failure, add this to last line <br/>
 
    /home/pi/.bashrc <br/>
    alias python='/usr/bin/python2' <br/>
