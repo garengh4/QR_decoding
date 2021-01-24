@@ -52,9 +52,9 @@ POINTS OF NOTE: <br/>
    cd /home/pi/Desktop <br/>
    python2 on_start_cmds.py <br/>
 
-Waking up black screen
-    export DISPLAY=:0
-    xset s reset
+Waking up black screen <br/>
+    export DISPLAY=:0 <br/>
+    xset s reset <br/>
 
 
    
