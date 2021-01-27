@@ -55,7 +55,8 @@ POINTS OF NOTE: <br/>
 Waking up black screen <br/>
     export DISPLAY=:0 <br/>
     xset s reset <br/>
-
-
+    
+Check if camera is enabled. If it returns start_x=1 then the camera is indeed enabled. <br/>
+    grep start_x=1 /boot/config.txt <br/>
    
    
